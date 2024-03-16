@@ -1,0 +1,61 @@
+# Dublin Core Metadata
+
+# Title
+title: Primary Biliary Cirrhosis (PBC) Data Set
+
+# Creator
+creator:
+  - name: Mayo Clinic
+
+# Subject
+subject:
+  - primary biliary cirrhosis
+  - clinical study
+  - medical research
+
+# Description: |
+description: |
+  The data were collected at the Mayo Clinic from January 1974 to May 1984
+  in order to evaluate a new treatment, D-penicillamine, for primary biliary
+  cirrhosis. The pbc data set consists of 20 observations with 17 variables
+  describing various clinical measurements and outcomes.
+
+# Publisher
+publisher: Mayo Clinic
+
+# Date
+date:
+  issued: 1997 
+
+# Type
+type: Dataset
+
+# Format
+format: Tabular data
+
+# Identifier
+identifier:
+  - type: Package
+    value: survival
+
+# Source
+source: https://cran.r-project.org/package=survival
+
+# Language
+language: en
+
+# Relation
+relation:
+  - type: IsPartOf
+    identifier: survival
+
+# Rights
+rights: Open Source
+
+# References
+references:
+  - identifier:
+      type: Citation
+      value: |
+        Therneau T., Atkinson E., (1997), An Introduction to Recursive
+        Partitioning Using the RPART Routines.
