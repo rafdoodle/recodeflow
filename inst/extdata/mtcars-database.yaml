@@ -1,0 +1,60 @@
+# Dublin Core Metadata
+
+# Title
+title: Motor Trend Car Road Tests
+
+# Creator
+creator:
+  - name: Open Source, Data Analysis Community
+
+# Subject
+subject:
+  - automobiles
+  - fuel efficiency
+  - performance
+
+# Description: |
+description: |
+  The data was extracted from the 1974 Motor Trend US magazine, and
+  comprises fuel consumption and 10 aspects of automobile design and
+  performance for 32 automobiles (1973–74 models).
+
+# Publisher
+publisher: Motor Trend Magazine
+
+# Date
+date:
+  issued: 1974  # Based on the year of the magazine
+
+# Type
+type: Dataset
+
+# Format
+format: Tabular data
+
+# Identifier
+identifier:
+  - type: Package
+    value: datasets
+
+# Source
+source: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/mtcars.html
+
+# Language
+language: en
+
+# Relation
+relation:
+  - type: IsPartOf
+    identifier: datasets
+
+# Rights
+rights: Open Source
+
+# References
+references:
+  - identifier:
+      type: Citation
+      value: >
+        Henderson and Velleman (1981), Building multiple regression models
+        interactively. Biometrics 37, 391–411.
