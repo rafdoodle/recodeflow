@@ -1105,11 +1105,8 @@ format_recoded_value <- function(cell_value, var_type) {
   recode_value <- NULL
   if (grepl("NA", cell_value)) {
     na_value_list <- strsplit(cell_value, ":")[[1]]
-    if (is_equal(var_type, pkg.env$columns.value.CatType)) {
-      recode_value <- paste("NA(", na_value_list[[3]], ")", sep = "")
-    } else {
-      recode_value <- haven::tagged_na(as.character(na_value_list[[3]]))
-    }
+    cell_value <- as.numeric(cell_value)  # Convert NA to numeric
+    recode_value <- labelled_na(as.character(na_value_list[[3]]))
   } else {
     if (!is_equal(var_type, pkg.env$columns.value.CatType) &&
         !is_equal(cell_value, "copy")) {
@@ -1120,6 +1117,26 @@ format_recoded_value <- function(cell_value, var_type) {
 
   return(recode_value)
 }
+
+#' format_recoded_value <- function(cell_value, var_type) {
+#'  recode_value <- NULL
+#'  if (grepl("NA", cell_value)) {
+#'    na_value_list <- strsplit(cell_value, ":")[[1]]
+#'    if (is.factor(cell_value) || is_equal(var_type, pkg.env$columns.value.CatType)) {
+#'      recode_value <- paste("NA(", na_value_list[[3]], ")", sep = "")
+#'    } else {
+#'      recode_value <- haven::tagged_na(as.character(na_value_list[[3]]))
+#'    }
+#'  } else {
+#'    if (!is_equal(var_type, pkg.env$columns.value.CatType) &&
+#'        !is_equal(cell_value, "copy")) {
+#'      cell_value <- as.numeric(cell_value)
+#'    }
+#'    recode_value <- cell_value
+#'  }
+#'
+#'  return(recode_value)
+#' }
 
 recode_derived_variables <-
   function(
